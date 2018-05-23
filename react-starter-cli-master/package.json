@@ -1,0 +1,38 @@
+{
+  "name": "react-starter-cli",
+  "version": "1.0.0",
+  "description": "tools for building react project",
+  "main": "no",
+  "bin": {
+    "react-cli": "./bin/react-cli"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackLearning/react-starter-cli.git"
+  },
+  "keywords": [
+    "react-starter-cli",
+    "react"
+  ],
+  "author": "blackLearning",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackLearning/react-starter-cli/issues"
+  },
+  "homepage": "https://github.com/blackLearning/react-starter-cli#readme",
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "commander": "^2.12.2",
+    "download-git-repo": "^1.0.2",
+    "fs-extra": "^5.0.0",
+    "inquirer": "^5.0.0",
+    "ora": "^1.3.0",
+    "shelljs": "^0.7.8"
+  }
+}

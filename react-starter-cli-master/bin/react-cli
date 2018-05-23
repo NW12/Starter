@@ -1,0 +1,40 @@
+#!/usr/bin/env node
+
+const program = require('commander');
+const chalk = require('chalk');
+const newCli = require('../lib/new');
+const generateCli = require('../lib/generate');
+
+program.version(require('../package').version).usage('<command> [options]');
+
+program
+  .command('new [otherDirs...]')
+  .usage('<project-name> [options]')
+  .description('create a new project with react-starter-kit')
+  .option('-c, --clone', 'use git clone')
+  .option('--no-auto-install', 'not auto install after generate project')
+  .action(newCli);
+
+program
+  .command('generate')
+  .description('generate new part of project')
+  .action(generateCli);
+
+program.on('--help', () => {
+  console.log('  Examples:');
+  console.log();
+  console.log(chalk.gray('    # create a new project with react-starter-kit'));
+  console.log('    $ new my-project');
+  console.log();
+  console.log(chalk.gray('    # create a new project straight from a github template'));
+  console.log('    $ new username/repo my-project');
+  console.log();
+});
+
+
+function help() {
+  program.parse(process.argv);
+  if (program.args.length < 1) return program.help();
+}
+help();
+
