@@ -1,4 +1,4 @@
-# react-starter-cli
+starter-cli
 the command line tool for building react-starter project quickly
 
 
